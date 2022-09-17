@@ -1,0 +1,87 @@
+.container {
+  position: absolute;
+  top: 15%;
+  width: 90%;
+  left: 5%;
+}
+
+.heading {
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 6pt;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+}
+
+.icon-dark {
+  background-image: url("../assets/icon-sun.svg");
+  border: none;
+  outline: none;
+  width: 25px;
+  height: 25px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.icon-light {
+  background-image: url("../assets/icon-moon.svg");
+  border: none;
+  outline: none;
+  width: 25px;
+  height: 25px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.dark-mode {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background-color: hsl(235, 21%, 11%);
+  background-image: url("../assets/bg-desktop-dark.jpg");
+  background-size: cover;
+  transition: all 0.2s ease-in-out;
+}
+.light-mode {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background-color: hsl(236, 33%, 92%);
+  background-image: url("../assets/bg-desktop-light.jpg");
+  background-size: cover;
+  transition: all 0.2s ease-in-out;
+}
+
+@media only screen and (min-width: 650px) {
+  .container {
+    position: absolute;
+    top: 15%;
+    width: 40%;
+    left: 30%;
+  }
+  .light-mode {
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    background-repeat: round;
+    background-position: cover;
+    background-color: hsl(236, 33%, 92%);
+    background-image: url("../assets/bg-desktop-light.jpg");
+    transition: all 0.2s ease-in-out;
+  }
+  .dark-mode {
+    position: absolute;
+    max-width: 100%;
+    height: 35%;
+    background-repeat: round;
+    background-position: cover;
+    background-color: hsl(235, 21%, 11%);
+    background-image: url("../assets/bg-desktop-dark.jpg");
+    transition: all 0.2s ease-in-out;
+  }
+}
