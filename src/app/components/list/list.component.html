@@ -1,12 +1,17 @@
 <div class="container">
   <mat-card class="card-todo">
-    <ul *ngFor="let task of tasks">
-      <app-card
-        [task]="task"
-        (getId)="toggleTodo($event)"
-        (getIdDelete)="deleteTodo($event)"
-      ></app-card>
-    </ul>
+    <!-- <ul *ngFor="let task of tasks">
+      
+    </ul> -->
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let task of tasks" cdkDrag>
+        <app-card
+          [task]="task"
+          (getId)="toggleTodo($event)"
+          (getIdDelete)="deleteTodo($event)"
+        ></app-card>
+      </div>
+    </div>
   </mat-card>
   <app-listfooter
     [taskCompleted]="taskCompleted"

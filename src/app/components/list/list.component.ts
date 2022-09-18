@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/interface/Task.interface';
 import { TodoService } from 'src/app/services/todo/todo.service';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-list',
@@ -20,6 +21,10 @@ export class ListComponent implements OnInit {
   getTask() {
     this.tasks = this.todoService.get();
     this.getTotalTaskCompleted();
+  }
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.tasks, event.previousIndex, event.currentIndex);
   }
 
   getTotalTaskCompleted() {
