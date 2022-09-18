@@ -1,9 +1,20 @@
-<div id="header" [ngClass]="{'light-mode':mode === 'light','dark-mode':mode === 'dark'}"></div>
-<div class="container">
-  <div class="title">
-    <div class="heading">TODO
+<div
+  id="header"
+  [ngClass]="{ 'light-mode': mode === 'light', 'dark-mode': mode === 'dark' }"
+  class="theme"
+>
+  <div class="container">
+    <div class="title">
+      <div class="heading">TODO</div>
+      <button
+        id="mode-icon"
+        [ngClass]="{
+          'icon-light': mode === 'light',
+          'icon-dark': mode === 'dark'
+        }"
+        class="icon"
+        (click)="changeMode()"
+      ></button>
     </div>
-    <button id="mode-icon" [ngClass]="{'icon-light':mode === 'light','icon-dark':mode === 'dark'}"
-      (click)="changeMode()"></button>
   </div>
 </div>
