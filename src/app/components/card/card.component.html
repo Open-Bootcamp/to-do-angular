@@ -1,6 +1,6 @@
-<li class="card-container">
-  <div class="circle">
-    <!-- <img src="/assets/icon-check.svg" alt="completed" /> -->
+<li class="card-container" [ngClass]="{ completed: task.completed }">
+  <div class="circle" (click)="toggleTodo()">
+    <img *ngIf="task.completed" src="/assets/icon-check.svg" alt="completed" />
   </div>
   <div class="text">
     <p>{{ task.description }}</p>
