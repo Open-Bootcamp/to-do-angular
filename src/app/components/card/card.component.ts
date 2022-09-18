@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from 'src/app/interface/Task.interface';
-import { TodoService } from 'src/app/services/todo/todo.service';
 
 @Component({
   selector: 'app-card',
@@ -9,12 +8,12 @@ import { TodoService } from 'src/app/services/todo/todo.service';
 })
 export class CardComponent implements OnInit {
   @Input() task: Task;
-
-  constructor(private todoService: TodoService) {}
+  @Output() getId: EventEmitter<number> = new EventEmitter();
+  constructor() {}
 
   ngOnInit(): void {}
 
   toggleTodo() {
-    this.todoService.toggleTodo(this.task.id);
+    this.getId.emit(this.task.id);
   }
 }

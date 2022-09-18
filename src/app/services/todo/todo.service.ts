@@ -21,11 +21,7 @@ export class TodoService {
   }
 
   toggleTodo(id: number) {
-    tasks.forEach((task, index) => {
-      if (task.id === id) {
-        tasks[index] = { ...task, completed: !task.completed };
-        return;
-      }
-    });
+    const index = tasks.findIndex((task) => task.id === id);
+    tasks[index] = { ...tasks[index], completed: !tasks[index].completed };
   }
 }

@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card class="card-todo">
     <ul *ngFor="let task of tasks">
-      <app-card [task]="task"></app-card>
+      <app-card [task]="task" (getId)="toggleTodo($event)"></app-card>
     </ul>
   </mat-card>
   <app-listfooter [taskCompleted]="taskCompleted"></app-listfooter>
