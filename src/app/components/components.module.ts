@@ -8,6 +8,7 @@ import { ListComponent } from './list/list.component';
 import { CardComponent } from './card/card.component';
 import { ListfooterComponent } from './listfooter/listfooter.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,15 @@ import { FormsModule } from '@angular/forms';
     ListComponent,
     CardComponent,
     ListfooterComponent,
+    FooterComponent,
   ],
   imports: [CommonModule, MatFormFieldModule, MatCardModule, FormsModule],
-  exports: [HeaderComponent, InputComponent, ListComponent, MatFormFieldModule],
+  exports: [
+    HeaderComponent,
+    InputComponent,
+    ListComponent,
+    FooterComponent,
+    MatFormFieldModule,
+  ],
 })
 export class ComponentsModule {}
