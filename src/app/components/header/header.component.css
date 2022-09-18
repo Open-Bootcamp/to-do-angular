@@ -1,9 +1,9 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex: 1;
   height: 100%;
+  padding: 0 1rem;
 }
 
 .heading {
@@ -17,14 +17,13 @@
 .title {
   display: flex;
   align-items: center;
-  gap: 8rem;
 }
 
 .icon {
   border: none;
   outline: none;
-  width: 3.12rem;
-  height: 3.12rem;
+  width: 2rem;
+  height: 2rem;
   background-color: inherit;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -58,6 +57,10 @@
 }
 
 @media only screen and (min-width: 650px) {
+  .container {
+    align-items: center;
+  }
+
   .title {
     gap: 20rem;
   }
