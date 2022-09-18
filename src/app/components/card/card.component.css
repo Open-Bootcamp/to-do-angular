@@ -1,0 +1,71 @@
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.card-container div:nth-child(2) {
+  flex: 1;
+}
+
+.text {
+  padding: 1.5rem 1rem;
+  transition: color 0.2s ease;
+}
+
+.text:hover {
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.completed .text {
+  text-decoration: line-through;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: all 0.2s ease;
+}
+
+.circle:hover {
+  background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+    border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  border-color: transparent;
+}
+
+.completed .circle {
+  background-image: linear-gradient(
+    120deg,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mask: unset;
+  -webkit-mask: unset;
+  -webkit-mask-composite: unset;
+  mask-composite: unset;
+}
+
+.icon-delete {
+  cursor: pointer;
+  margin-right: 1rem;
+  display: none;
+}
+
+.card-container:hover .icon-delete {
+  display: block;
+}

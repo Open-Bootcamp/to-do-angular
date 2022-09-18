@@ -1,0 +1,39 @@
+.card-input {
+  margin-top: 2rem;
+  background-color: var(--card-background);
+  padding: 0;
+}
+
+@media (min-width: 650px) {
+  .card-input {
+    margin-top: 0;
+    width: 530px;
+    height: inherit;
+  }
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  margin-left: 1rem;
+  border: 1px solid var(--border);
+}
+
+.form {
+  flex: 1;
+}
+
+.form .input {
+  width: 100%;
+  background-color: var(--card-background);
+  padding: 1.5rem 1rem;
+  color: var(--text-dark);
+}
