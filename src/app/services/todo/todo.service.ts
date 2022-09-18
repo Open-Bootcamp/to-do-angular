@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Task } from 'src/app/interface/Task.interface';
 
-const tasks: Task[] = [
+let tasks: Task[] = [
   { id: 1, description: 'test', completed: true },
   { id: 2, description: 'test2', completed: false },
 ];
@@ -20,8 +20,13 @@ export class TodoService {
     tasks.push(newTask);
   }
 
+  delete(id: number) {
+    tasks = tasks.filter((task) => task.id !== id);
+  }
+
   toggleTodo(id: number) {
-    const index = tasks.findIndex((task) => task.id === id);
-    tasks[index] = { ...tasks[index], completed: !tasks[index].completed };
+    tasks = tasks.map((task) =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    );
   }
 }

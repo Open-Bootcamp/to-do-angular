@@ -28,6 +28,16 @@ export class ListComponent implements OnInit {
 
   toggleTodo(id: number) {
     this.todoService.toggleTodo(id);
+    this.updateTodo();
+  }
+
+  deleteTodo(id: number) {
+    this.todoService.delete(id);
+    this.updateTodo();
+  }
+
+  updateTodo() {
     this.getTotalTaskCompleted();
+    this.getTask();
   }
 }
