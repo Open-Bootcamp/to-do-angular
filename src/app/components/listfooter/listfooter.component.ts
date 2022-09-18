@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TodoService } from 'src/app/services/todo/todo.service';
 
 @Component({
   selector: 'app-listfooter',
@@ -7,7 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListfooterComponent implements OnInit {
   @Input() taskCompleted: number;
-  constructor() {}
+  @Output() clearCompleted: EventEmitter<void> = new EventEmitter();
+  constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {}
+
+  deleteCompleted() {
+    this.clearCompleted.emit();
+  }
 }

@@ -29,4 +29,8 @@ export class TodoService {
       task.id === id ? { ...task, completed: !task.completed } : task
     );
   }
+
+  deleteCompleted() {
+    tasks = tasks.filter((task) => task.completed === false);
+  }
 }
