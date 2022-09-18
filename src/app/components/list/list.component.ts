@@ -13,12 +13,31 @@ export class ListComponent implements OnInit {
   public taskCompleted: number;
   constructor(private todoService: TodoService) {}
 
+  ngOnInit(): void {
+    this.getTask();
+  }
+
   getTask() {
     this.tasks = this.todoService.get();
+    this.getTotalTaskCompleted();
+  }
+
+  getTotalTaskCompleted() {
     this.taskCompleted = this.tasks.filter((task) => task.completed).length;
   }
 
-  ngOnInit(): void {
+  toggleTodo(id: number) {
+    this.todoService.toggleTodo(id);
+    this.updateTodo();
+  }
+
+  deleteTodo(id: number) {
+    this.todoService.delete(id);
+    this.updateTodo();
+  }
+
+  updateTodo() {
+    this.getTotalTaskCompleted();
     this.getTask();
   }
 }
