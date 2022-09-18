@@ -1,17 +1,8 @@
 <div class="container">
   <mat-card class="card-todo">
-    <ul>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
+    <ul *ngFor="let task of tasks">
+      <app-card [task]="task"></app-card>
     </ul>
   </mat-card>
-  <app-listfooter></app-listfooter>
+  <app-listfooter [taskCompleted]="taskCompleted"></app-listfooter>
 </div>

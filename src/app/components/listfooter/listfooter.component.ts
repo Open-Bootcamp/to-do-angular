@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-listfooter',
   templateUrl: './listfooter.component.html',
-  styleUrls: ['./listfooter.component.css']
+  styleUrls: ['./listfooter.component.css'],
 })
 export class ListfooterComponent implements OnInit {
+  @Input() taskCompleted: number;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
