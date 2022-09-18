@@ -9,6 +9,7 @@ import { CardComponent } from './card/card.component';
 import { ListfooterComponent } from './listfooter/listfooter.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,13 @@ import { FooterComponent } from './footer/footer.component';
     ListfooterComponent,
     FooterComponent,
   ],
-  imports: [CommonModule, MatFormFieldModule, MatCardModule, FormsModule],
+  imports: [
+    CommonModule,
+    DragDropModule,
+    MatFormFieldModule,
+    MatCardModule,
+    FormsModule,
+  ],
   exports: [
     HeaderComponent,
     InputComponent,
