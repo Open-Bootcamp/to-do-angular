@@ -8,5 +8,8 @@
       ></app-card>
     </ul>
   </mat-card>
-  <app-listfooter [taskCompleted]="taskCompleted"></app-listfooter>
+  <app-listfooter
+    [taskCompleted]="taskCompleted"
+    (clearCompleted)="deleteCompleted()"
+  ></app-listfooter>
 </div>

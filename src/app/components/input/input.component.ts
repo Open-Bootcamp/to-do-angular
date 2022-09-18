@@ -14,6 +14,7 @@ export class InputComponent implements OnInit {
   ngOnInit(): void {}
 
   addTask() {
+    if (this.newTask.trim().length < 3) return;
     this.todoService.add({
       id: new Date().getTime(),
       description: this.newTask,

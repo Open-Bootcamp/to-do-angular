@@ -40,4 +40,8 @@ export class ListComponent implements OnInit {
     this.getTotalTaskCompleted();
     this.getTask();
   }
+  deleteCompleted() {
+    this.todoService.deleteCompleted();
+    this.updateTodo();
+  }
 }
