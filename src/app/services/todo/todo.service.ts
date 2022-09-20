@@ -20,6 +20,11 @@ export class TodoService {
     tasks.push(newTask);
   }
 
+  taskCompleted() {
+    tasks = tasks.filter((task) => task.completed === true);
+    console.log(tasks);
+  }
+
   delete(id: number) {
     tasks = tasks.filter((task) => task.id !== id);
   }
