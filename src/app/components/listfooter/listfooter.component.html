@@ -2,10 +2,11 @@
   <div class="count-item">
     <p>{{ taskCompleted }} items left</p>
   </div>
+
   <div class="filter">
-    <p>All</p>
-    <p>Active</p>
-    <p>Completed</p>
+    <p (click)="getAllTask()">All</p>
+    <p (click)="getActiveTask()">Active</p>
+    <p (click)="getCompletedTask()">Completed</p>
   </div>
   <div class="clear-completed" (click)="deleteCompleted()">
     <p>Clear Completed</p>

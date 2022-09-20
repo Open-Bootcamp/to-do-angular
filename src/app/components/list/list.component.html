@@ -1,8 +1,5 @@
 <div class="container">
   <mat-card class="card-todo">
-    <!-- <ul *ngFor="let task of tasks">
-      
-    </ul> -->
     <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
       <div class="example-box" *ngFor="let task of tasks" cdkDrag>
         <app-card
@@ -16,5 +13,8 @@
   <app-listfooter
     [taskCompleted]="taskCompleted"
     (clearCompleted)="deleteCompleted()"
+    (activeTask)="getTaskActive()"
+    (completedTask)="getTaskCompleted()"
+    (allTask)="getTask()"
   ></app-listfooter>
 </div>

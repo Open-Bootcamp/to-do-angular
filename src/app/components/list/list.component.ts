@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { Task } from 'src/app/interface/Task.interface';
 import { TodoService } from 'src/app/services/todo/todo.service';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { ListfooterComponent } from '../listfooter/listfooter.component';
 
 @Component({
   selector: 'app-list',
@@ -9,13 +10,21 @@ import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
   styleUrls: ['./list.component.css'],
   providers: [TodoService],
 })
-export class ListComponent implements OnInit {
+export class ListComponent implements OnInit, AfterViewInit {
   public tasks: Task[];
   public taskCompleted: number;
+
+  @ViewChild(ListfooterComponent) child: any;
+
   constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {
     this.getTask();
+  }
+
+  ngAfterViewInit() {
+    console.log(this.child.message);
+    console.log(this.child.all);
   }
 
   getTask() {
@@ -29,6 +38,18 @@ export class ListComponent implements OnInit {
 
   getTotalTaskCompleted() {
     this.taskCompleted = this.tasks.filter((task) => task.completed).length;
+  }
+
+  getTaskCompleted() {
+    this.getTask();
+    this.tasks = this.tasks.filter((task) => task.completed === true);
+    console.log(this.tasks);
+  }
+
+  getTaskActive() {
+    this.getTask();
+    this.tasks = this.tasks.filter((task) => task.completed === false);
+    console.log(this.tasks);
   }
 
   toggleTodo(id: number) {
@@ -45,6 +66,7 @@ export class ListComponent implements OnInit {
     this.getTotalTaskCompleted();
     this.getTask();
   }
+
   deleteCompleted() {
     this.todoService.deleteCompleted();
     this.updateTodo();
