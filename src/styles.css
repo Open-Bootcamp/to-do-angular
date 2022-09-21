@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  --card-background: hsl(0, 0%, 98%);
+  --background: hsl(236, 33%, 92%);
+  --text-light: hsl(233, 11%, 84%);
+  --text: hsl(236, 9%, 61%);
+  --text-dark: hsl(235, 19%, 35%);
+  --border: hsl(233, 11%, 84%);
+}
+
+body.dark-theme {
+  --background: hsl(235, 21%, 11%);
+  --card-background: hsl(235, 24%, 19%);
+  --text-light: hsl(234, 39%, 85%);
+  --text: hsl(236, 33%, 92%);
+  --text-dark: hsl(234, 11%, 52%);
+  /*
+  - Very Dark Grayish Blue: hsl(233, 14%, 35%)
+  - Very Dark Grayish Blue: hsl(237, 14%, 26%) */
+  --border: hsl(237, 14%, 26%);
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: var(--background);
+}

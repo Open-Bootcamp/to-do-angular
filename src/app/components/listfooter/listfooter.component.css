@@ -1,0 +1,50 @@
+.list-footer {
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  background-color: var(--card-background);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  width: 100%;
+  font-size: 0.625rem;
+  gap: 1rem;
+}
+
+@media (min-width: 650px) {
+  .list-footer {
+    font-size: 1rem;
+  }
+}
+
+.count-item {
+  color: var(--text-dark);
+}
+
+.filter {
+  display: flex;
+  color: var(--text);
+  gap: 1rem;
+}
+
+.filter p:hover {
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.filter p.selected {
+  background: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clear-completed {
+  color: var(--text-light);
+}
+
+.clear-completed:hover {
+  color: var(--text);
+  cursor: pointer;
+}

@@ -1,0 +1,15 @@
+<mat-card class="card-input">
+  <div class="card-container">
+    <div class="circle"></div>
+    <form class="form">
+      <input
+        [(ngModel)]="newTask"
+        [ngModelOptions]="{ standalone: true }"
+        (keyup.enter)="addTask()"
+        class="input"
+        matInput
+        placeholder="Create a new todo..."
+      />
+    </form>
+  </div>
+</mat-card>
