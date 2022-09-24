@@ -1,27 +1,56 @@
-# ToDoAngular
+# Openings App Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+## Tabla de Contenidos
 
-## Development server
+- [Openings App Angular](#openings-app-angular)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [Preview](#preview)
+    - [Screenshot](#screenshot)
+  - [Proyecto](#proyecto)
+    - [Links](#links)
+  - [Proceso](#proceso)
+    - [Construido con:](#construido-con)
+    - [Recursos Utilizados](#recursos-utilizados)
+  - [Autores](#autores)
+    - [OpenBootcamp Community](#openbootcamp-community)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Preview
 
-## Code scaffolding
+### Screenshot
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![](./src/assets/img.png)
 
-## Build
+## Proyecto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Este proyecto fue realizado con la participación de los integrantes de OpenBootcamp, y es parte de una dinámica llamada "OpenWeekapps"
 
-## Running unit tests
+### Links
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Repositorio: [Solution](https://github.com/Open-Bootcamp/to-do-angular)
+- Live Site URL: [Live App](https://to-do-ob.netlify.app/)
 
-## Running end-to-end tests
+## Proceso
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Construido con:
 
-## Further help
+- Mobile-first
+- Diseño Responsivo
+- Flexbox
+- Angular
+- TypeScript
+- Angular Material
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Recursos Utilizados
+
+- [Angular Docs](https://angular.io/docs)
+- [TypeScript Docs](https://www.typescriptlang.org/docs/)
+- [Angular Material Docs](https://material.angular.io/)
+- [MDN Web Docs](https://developer.mozilla.org/es/docs/Web)
+
+## Autores
+
+### OpenBootcamp Community
+
+- GitHub - [@YhonaPeguero](https://github.com/YhonaPeguero)
+- GitHub - [@Luis](https://github.com/lvanegasimagine)
+- GitHub - [@Osmar Ortiz](https://github.com/Xizted)
